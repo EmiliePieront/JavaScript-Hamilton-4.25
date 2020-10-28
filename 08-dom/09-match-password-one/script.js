@@ -10,13 +10,17 @@
 // You will have time to focus on it later.
 
 (function() {
-
+   
     document.getElementById("run").addEventListener("click", function(){    
-        document.getElementsByTagName("img")[0].src = gallery[i];
-        x = document.getElementsById("pass-one");
-        y = document.getElementsById("pass-two");
-        if (x !== y){
-            
+        let x = document.getElementById("pass-one").value;
+        let y = document.getElementById("pass-two").value;
+        if (x != y){
+            document.getElementsByTagName("input")[0].style.borderColor = "red";
+            document.getElementsByTagName("input")[1].style.borderColor = "red";
+        }
+        else {
+            document.getElementsByTagName("input")[0].style.borderColor = "silver";
+            document.getElementsByTagName("input")[1].style.borderColor = "silver";
         }
     });
 
