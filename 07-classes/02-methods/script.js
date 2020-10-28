@@ -10,5 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    class Person {
+        constructor(firstname, lastname) {
+            this.Firstname = firstname;
+            this.Lastname = lastname;
+        }
+        sayHello() { 
+            console.log("Hello, " + this.Firstname + " " + this.Lastname + "!");
+        }
+    }
+    document.getElementById("run").addEventListener("click", function () {
+        
+        let user = new Person("Emilie", "Pieront");
+        user.sayHello();
+     });
 })();

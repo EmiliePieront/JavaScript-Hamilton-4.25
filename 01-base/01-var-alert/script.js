@@ -10,6 +10,10 @@
 // You will have time to focus on it later.
 
 (function() {
-    // your code here
+    let whatever = "hello world!!!";
+    alert(whatever);
+    let exo1= "Hello, World!. ";
+    alert(exo1);
 
 })();
+

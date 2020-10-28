@@ -10,5 +10,21 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    class Person {
+        constructor(firstname, lastname) {
+            this.Firstname = firstname;
+            this.Lastname = lastname;
+        };
+        get fullname(){
+            return '"' + this.Firstname + " " + this.Lastname + '"';
+        };
+        set fullname(lastname) {
+            this.Lastname = "P"+"I"+"E"+"R"+"O"+"N"+"T";
+        };
+    };
+    document.getElementById("run").addEventListener("click", function () {
+        
+        let moi = new Person("Emilie", "Pieront");
+        console.log(Person.fullname(), Person.fullname());
+     });
 })();

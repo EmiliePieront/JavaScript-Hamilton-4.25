@@ -11,6 +11,9 @@
 
 (function() {
 
-    // your code here
+    var start = 'Hello ',name, end = ' !', result;
+    name = prompt('Quel est votre prénom ?');
+    result = start + name + end;
+    alert(result);
 
 })();

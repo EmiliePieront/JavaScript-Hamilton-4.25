@@ -12,9 +12,15 @@
 (() => {
     class Cat {
         constructor(name, age) {
-            this.name = name;
-            this.age = age;
+            this.Name = name;
+            this.Age = age;
         }
     }
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+        const skitty = new Cat("Skitty", 9);
+        const pixel = new Cat("Pixel" , 6);
+        console.log(skitty, pixel);
+        
+     });
+ 
 })();

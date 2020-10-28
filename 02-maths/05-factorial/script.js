@@ -15,8 +15,21 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        //var number = document.getElementById("number").value;
+        let num = document.getElementById("number").value;
+        /*alert(num);   Just for test getlement*/
 
+        factorialize(num);
+ 
     });
 
 })();
+
+function factorialize(num) {
+    if (num === 0 || num === 1)
+      return 1;
+    for (var i = num - 1; i >= 1; i--) {
+      num *= i;
+    }
+    alert(num);
+  }

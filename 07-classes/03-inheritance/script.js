@@ -8,12 +8,30 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-
 (() => {
     class Animal {
         sayHello() {
             return `${this.constructor.greeting}! I'm ${this.name}!`;
         }
     }
-    // your code here
+    class Cat extends Animal {
+        static greeting = greeting;
+        constructor(name) {
+            this.name = name;
+        }
+    }
+    class Dog extends Animal {
+        static greeting = greeting;
+        constructor(name) {
+            this.name = name
+        }
+    }
+
+    document.getElementById("run").addEventListener("click", function () {
+        
+        let dog = new Dog("dog");
+        let cat = new Cat("cat");
+        
+        console.log(cat.sayHello() + dog.sayHello());
+     });
 })();

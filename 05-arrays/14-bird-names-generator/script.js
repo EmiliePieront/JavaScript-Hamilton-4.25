@@ -38,5 +38,19 @@
         "arboré",
     ]);
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function(){   
+        let randomBirds = Math.floor(Math.random() * birds.length);
+        let birdName = birds[randomBirds].name;
+        let birdFem = birds[randomBirds].fem;
+        let adjectivesArray = [...adjectives];
+        let randomAdjectives = Math.floor(Math.random() * adjectives.size);
+        
+        let adjective = adjectivesArray[randomAdjectives];
+
+        if (birdFem) {
+            document.getElementById("target").innerHTML = "La " + birdName + " " + adjective + "e";
+        } else {
+            document.getElementById("target").innerHTML = "Le " + birdName + " " + adjective;
+        }
+    }); 
 })();
