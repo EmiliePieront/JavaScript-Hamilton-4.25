@@ -10,7 +10,13 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
-
+   
+    let x = document.getElementsByTagName("IMG")[0].getAttribute("src"); 
+    let y = document.getElementsByTagName("IMG")[0].getAttribute("data-hover"); 
+    document.getElementsByTagName("img")[0].addEventListener("mouseover", () => {
+        document.getElementsByTagName("img")[0].src = y;
+    });
+    document.getElementsByTagName("img")[0].addEventListener("mouseout", () => {
+        document.getElementsByTagName("img")[0].src = x;
+    });
 })();

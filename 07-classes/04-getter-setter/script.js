@@ -16,15 +16,19 @@
             this.Lastname = lastname;
         };
         get fullname(){
-            return '"' + this.Firstname + " " + this.Lastname + '"';
+            return `${this.Firstname} ${this.Lastname}`;
         };
-        set fullname(lastname) {
-            this.Lastname = "P"+"I"+"E"+"R"+"O"+"N"+"T";
-        };
+        set fullname(value){
+            [this.Firstname, this.Lastname] = value.split(" ");
+        }
     };
+    let moi = new Person("Emilie", "Pieront");
     document.getElementById("run").addEventListener("click", function () {
-        
-        let moi = new Person("Emilie", "Pieront");
-        console.log(Person.fullname(), Person.fullname());
+        console.log(moi.fullname);
+        moi.fullname = "Dany Boon";
+        console.log(moi.fullname);
      });
+
 })();
+
+// split est super important pour qu'il prenne les éléments à la suite.

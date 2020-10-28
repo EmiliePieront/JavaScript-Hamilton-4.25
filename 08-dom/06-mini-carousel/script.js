@@ -18,7 +18,13 @@
         "../../_shared/img/lemon.svg",
         "../../_shared/img/map.svg",
     ];
-
-    // your code here
+    let i = 0
+    document.getElementById("next").addEventListener("click", function(){    
+        document.getElementsByTagName("img")[0].src = gallery[i];
+        i += 1;
+        if (i == gallery.length){ 
+            i = 0 ;
+        }
+    });
 
 })();

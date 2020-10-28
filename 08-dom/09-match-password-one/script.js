@@ -11,6 +11,13 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function(){    
+        document.getElementsByTagName("img")[0].src = gallery[i];
+        x = document.getElementsById("pass-one");
+        y = document.getElementsById("pass-two");
+        if (x !== y){
+            
+        }
+    });
 
 })();
