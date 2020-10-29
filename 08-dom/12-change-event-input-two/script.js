@@ -10,7 +10,18 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
+    let password = document.getElementById('pass-one');
+    password.addEventListener('keyup', () => {
+        const paragraph = password.value;
+        const regex = /[0-9]/g;
+        const number = paragraph.match(regex);
+        if (number.length >=2 && paragraph.length >= 8){
+            document.getElementById("validity").innerHTML = "ok";
+        }
+        else { 
+            document.getElementById("validity").innerHTML = "Not ok";
+        };
+    });
 
 })();
+
