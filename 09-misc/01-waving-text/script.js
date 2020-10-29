@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+    let letterContainer = document.querySelector("#target");
+    let letters = letterContainer.innerText;
+    letters = letters.split("");
+    letterContainer.innerText = "";
+    const size = [ 15, 18, 21, 24, 27, 30, 27, 24, 21, 18];
+
+    letters.forEach(function(letter, i){
+        let wrap = document.createElement("span");
+        wrap.innerText = letter;
+        wrap.style.fontSize = size[i % size.length] + "px";
+        letterContainer.appendChild(wrap);
+    });
 
 })();
