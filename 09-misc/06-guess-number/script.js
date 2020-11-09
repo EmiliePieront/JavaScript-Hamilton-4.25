@@ -28,7 +28,7 @@ function guessNumber() {
         }
         else if (number > random) {
             number = parseInt(prompt("lower"));
-        ++counter;
+            ++counter;
         }
     }
     if (number == random){
