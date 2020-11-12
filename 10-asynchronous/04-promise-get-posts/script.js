@@ -11,6 +11,12 @@
 
 (() => {
     document.querySelector("#run").addEventListener("click", () => {
-        window.lib.getPosts(error, articles)
+      window.lib.getPosts()
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     });
-})();
+  })();
