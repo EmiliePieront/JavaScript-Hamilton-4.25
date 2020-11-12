@@ -10,5 +10,12 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-})();
+    document.querySelector("#run").addEventListener("click",async () => {
+    try{
+        const result = await window.lib.getPosts()
+        console.log(result)
+    }catch(error){
+        console.error(error)
+    }
+    });
+  })();
